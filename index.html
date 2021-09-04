@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Any Draw</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+   
+</head>
+<body>
+    <div class="container">
+        <div class="menu">
+            <div class="title">
+                <h1>Any Draw</h1>
+            </div>
+            <div class="tool">
+                <input type="radio" name="type" id="pencil" disabled>
+                <label for="pencil">
+                    <img src="assets/icons/pencil.png"  alt="pencil" height="20px" width="20px">
+                </label>
+                <input type="radio" name="type" id="brush" checked>
+                <label for="brush">
+                    <img src="assets/icons/brush.png" alt="brush" height="20px" width="20px">
+                </label>
+                <input type="radio" name="type" id="circle" disabled>
+                <label for="circle">
+                    <img src="assets/icons/circle.png" alt="circle" height="20px" width="20px">
+                </label>
+                <input type="radio" name="type" id="rectangle" disabled>
+                <label for="rectangle">
+                    <img src="assets/icons/rectangle.png" alt="rectangle" height="20px" width="30px">
+                </label>
+                <input type="radio" name="type" id="erase">
+                <label for="erase">
+                    <img src="assets/icons/eraser.png" alt="eraser" height="20px" width="20px">
+                </label>
+            </div>
+                
+            <div class="bsize">
+                <label for="size">Size</label>
+                <input type="range" id="myRange" min="1" max="50" value="5">
+            </div>
+            <div class="col">
+                <label for="color">Color</label>
+                <input type="color" id="myColor" value="#000000">
+            </div>
+            <div class="action">
+                <a href="" id="saveLink"><button id="save">Save</button></a>
+                <button id="reset">Reset</button>
+            </div>
+        </div>
+        <canvas id="canvas"></canvas>
+    </div>
+
+ 
+    <script src="assets/js/script.js"></script>
+</body>
+</html>
