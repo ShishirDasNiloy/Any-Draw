@@ -26,6 +26,7 @@
     font-weight: 600;
     color: #2F5D62;
     width: 300px;
+    cursor: pointer;
 }
 .container .menu .title:hover{
     color: #ffffff;
@@ -46,6 +47,7 @@
     text-align: center;
     line-height: 50px;
     margin: 10px 10px;
+    cursor: pointer;
 }
 .container .menu .tool img{
     padding-top: 15px;
@@ -64,6 +66,7 @@
     color: #000000;
     border-radius: 5px;
     width: 65px;
+    cursor: pointer;
 }
 .container .menu .action button:hover{
     background-color: #01937C;

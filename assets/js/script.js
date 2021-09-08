@@ -29,6 +29,7 @@ ctx.strokeStyle = myColor;
 var mySize = size.value;
 ctx.lineWidth = mySize;
 
+
 canvas.style.cursor = "pointer";
 
 canvas.addEventListener("mousedown", brushDown, false);
@@ -87,6 +88,8 @@ function brushUp() {
 }
 
 function brushClick() {
+	ctx.lineJoin = "round";
+	ctx.lineCap = "round";
 	var brushColor = document.getElementById("myColor");
 	ctx.strokeStyle = brushColor.value; 
 	
@@ -96,6 +99,8 @@ function brushClick() {
 }
 
 function eraserClick() {
+	ctx.lineJoin = "round";
+	ctx.lineCap = "round";
 	ctx.strokeStyle = "white";
 	
 	canvas.addEventListener("mousedown", brushDown, false);
@@ -117,8 +122,14 @@ function saveClick() {
 }
 
 function pencilClick(){
-  alert("not available");
-  return false;
+	ctx.lineJoin = "square";
+	ctx.lineCap = "square";
+	var pencilColor = document.getElementById("myColor");
+	ctx.strokeStyle = pencilColor.value; 
+	
+	canvas.addEventListener("mousedown", brushDown, false); 
+	canvas.addEventListener("mousemove", brushMove, false);
+	canvas.addEventListener("mouseup", brushUp, false);
 }
 
 brush.addEventListener("click", brushClick);  
